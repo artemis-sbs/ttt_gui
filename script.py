@@ -15,9 +15,9 @@ class TicTacToe:
                 x = (index % 3) * 10 + 30
                 y = index//3  * 10 + 30
                 if p == Turn.X_TURN:
-                    sbs.send_gui_text(0, "X", "text", x, y, x+10,y+10)
+                    sbs.send_gui_text(0, "X", f"x{index+1}", x, y, x+10,y+10)
                 elif p == Turn.O_TURN:
-                    sbs.send_gui_text(0, "O", "text", x, y, x+10,y+10)
+                    sbs.send_gui_text(0, "O", f"o{index+1}", x, y, x+10,y+10)
                 else:
                     sbs.send_gui_button(0, f"{index+1}", f"{index}", x, y, x+10,y+10)
         elif state == EndGame.X_WINS:
